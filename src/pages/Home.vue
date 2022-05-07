@@ -244,7 +244,7 @@ export default {
       );
 
       this.move++;
-   console.log(ordered);
+  
       if (!ordered) {
         return;
       }

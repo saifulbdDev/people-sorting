@@ -1,5 +1,9 @@
 # people-sorting
 
+## Live Project vercel
+```
+See [Live preview](https://people-sorting.vercel.app/)
+```
 ## Project setup
 ```
 yarn install
