@@ -1,7 +1,13 @@
 # people-sorting
 
 
-### [Demo & Reference] https://people-sorting.vercel.app/
+
+## Live Project vercel
+```
+
+### Demo
+See (https://people-sorting.vercel.app/).
+
 
 ```
 ## Project setup
