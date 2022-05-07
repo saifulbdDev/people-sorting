@@ -3,22 +3,13 @@
     <div class="modal__content">
       <div class="modal__head">
         <p class="modal__head__title">How many people?</p>
-        <svg
-          @click="close"
-          class="modal__head__close"
+        <img
           width="18"
           height="19"
-          viewBox="0 0 18 19"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M11.4443 9.82843L18 3.27277L15.5557 0.82843L9 7.3841L2.44434 0.828433L0 3.27277L6.55566 9.82843L4.43441e-06 16.3841L2.44434 18.8284L9 12.2728L15.5557 18.8284L18 16.3841L11.4443 9.82843Z"
-            fill="#999999"
-          />
-        </svg>
+          class="modal__head__close"
+          @click="close"
+          src="@/images/close.svg"
+        />
       </div>
       <div
         class="modal__body"
@@ -61,23 +52,11 @@
 export default {
   name: "SortableModal",
   props: {
-    modal: {
-      type: Boolean,
-      default: false,
-    },
     value: {
-      type: Number,
-      default: 20,
+      type: [String, Number],
     },
   },
-  model: {
-    set(value) {
-      this.$emit("input", value);
-    },
-    get() {
-      return this.value;
-    },
-  },
+
   methods: {
     close() {
       this.$emit("close");
@@ -86,4 +65,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="sass" scoped>
+@import '../styles/_modal.scss';
+</style>

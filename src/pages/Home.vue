@@ -82,10 +82,10 @@
             </tr>
           </draggable>
           <!-- body end -->
-          <p v-if="users.length === 0" class="text-center">
-            Data not loaded yet!
-          </p>
         </table>
+        <p v-if="users.length === 0" class="text-center">
+          Data not loaded yet!
+        </p>
         <!-- table -->
       </div>
     </div>
@@ -99,7 +99,13 @@
       v-model.number="selectedRange"
     />
     <!--  generate people modal  end -->
-    <SuccessModal  v-if="successModal"/>
+    <SuccessModal
+      :message="message"
+      :move="move"
+      @restart="restart"
+      @close="successModal = false"
+      v-if="successModal"
+    />
   </section>
 </template>
 
@@ -107,7 +113,7 @@
 import { faker } from "@faker-js/faker";
 import draggable from "vuedraggable";
 import Modal from "../components/Modal.vue";
-import SuccessModal from "../components/Modal.vue";
+import SuccessModal from "../components/SuccessModal.vue";
 export default {
   name: "SortableHome",
   components: {
@@ -238,7 +244,7 @@ export default {
       );
 
       this.move++;
-
+   console.log(ordered);
       if (!ordered) {
         return;
       }
@@ -246,7 +252,7 @@ export default {
       clearInterval(this.timer);
 
       this.message = this.getReadableTimeFromNow(new Date(this.time));
-      this.modals.success = true;
+      this.successModal = true;
       this.escapedTime = "";
     },
 
@@ -255,8 +261,9 @@ export default {
      */
     restart() {
       this.reset();
-      this.modals.success = false;
-      this.modals.start = true;
+      
+      this.successModal = false;
+      this.startModal = true;
     },
 
     /**
