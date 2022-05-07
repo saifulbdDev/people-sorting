@@ -2,14 +2,7 @@
 
 
 
-## Live Project vercel
-```
 
-
-See [Demo](https://people-sorting.vercel.app/).
-
-
-```
 ## Project setup
 ```
 yarn install
@@ -32,4 +25,7 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+"# people-sorting" 
+### Live Project
+See [Demo](https://cli.vuejs.org/config/).
 "# people-sorting" 
