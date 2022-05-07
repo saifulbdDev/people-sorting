@@ -2,7 +2,8 @@
 
 ## Live Project vercel
 ```
-See [Live preview](https://people-sorting.vercel.app/)
+### [Demo & Reference] https://people-sorting.vercel.app/
+
 ```
 ## Project setup
 ```
