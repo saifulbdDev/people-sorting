@@ -5,8 +5,8 @@
 ## Live Project vercel
 ```
 
-### Demo
-See (https://people-sorting.vercel.app/).
+
+See [Demo](https://people-sorting.vercel.app/).
 
 
 ```
