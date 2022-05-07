@@ -1,8 +1,6 @@
 # people-sorting
 
-## Live Project vercel
-```
-[link text itself]: http://www.reddit.com
+
 ### [Demo & Reference] https://people-sorting.vercel.app/
 
 ```
