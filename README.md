@@ -27,5 +27,5 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 "# people-sorting" 
 ### Live Project
-See [Demo](https://cli.vuejs.org/config/).
-"# people-sorting" 
+See [Demo](https://people-sorting.vercel.app/).
+
