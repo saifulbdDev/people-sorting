@@ -3,7 +3,6 @@
     <div class="modal__content">
       <div class="modal__head">
         <p class="modal__head__title">Success</p>
-        @click="close"
         <img
           width="18"
           height="19"
@@ -13,8 +12,9 @@
         />
       </div>
       <div class="modal__body">
-        <p class="modal__body__description">Time required: {{ message }}</p>
-        <p class="modal__body__description">Total moves: {{ move }}</p>
+        <p class="modal__body__description">You have successfully sorted the people</p>
+        <p class="modal__body__description">Total Time:<b> {{ message }}</b></p>
+        <p class="modal__body__description">Total moves: <b>{{ move }}</b></p>
       </div>
       <div class="modal__footer">
         <button @click="close" class="btn">Close</button>
