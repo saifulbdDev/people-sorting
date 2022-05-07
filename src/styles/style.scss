@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import 'variables';
+
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F5F5F5;
+  font-size: 14px;
+}
+
+.btn {
+  background-color: $Grayscale7;
+  border-radius: $border-radius;
+  border: none;
+  cursor: pointer;
+  padding: 12px 22px;
+
+  &:hover {
+    background-color: darken($Grayscale7, 3%);
+  }
+
+  &--primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      background-color: darken($primary, 3%);
+    }
+  }
+
+  &--disabled {
+    opacity: .8;
+    pointer-events: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.sortable-seaction {
+  max-width: 1140px;
+  margin: 0 auto;
+  &__info {
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    font-weight: 700;
+    justify-content: space-between;
+    padding: 25px 30px;
+  }
+  &__head {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 32px;
+      font-weight: 400;
+    }
+
+    &__action {
+      background-color: $primary;
+      border-radius: $border-radius;
+      border: none;
+      color: $white;
+      cursor: pointer;
+      font-size: 15px;
+      padding: 15px 35px;
+
+      &:hover {
+        background-color: darken($primary, 3%);
+      }
+    }
+  }
+}
+
+.container {
+  background-color: $white;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
+}
+
+
+
+.tag {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    background-color: $Grayscale7;
+    border-radius: 16px;
+    font-size: 13px;
+    margin-right: 10px;
+    padding: 6px 10px;
+
+    &--more {
+      background-color: transparent;
+      padding: 6px 0;
+    }
+  }
+}
+
+.modal {
+  align-items: center;
+  background-color: transparentize($color: $black, $amount: .8);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+ 
+  .error__body{
+    .modal__body__input{
+      border: 1px solid red;
+    }
+    .error-msg{
+      color: red;
+    }
+     
+  }
+  &__content {
+    animation-duration: 0.4s;
+    animation-name: animatetop;
+    background-color: $white;
+    border-radius: $border-radius;
+    position: relative;
+    width: 440px;
+  }
+  
+  &__head {
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    &__title {
+      font-size: 18px;
+      font-weight: 700px;
+      margin: 0;
+    }
+
+    &__close {
+      cursor: pointer;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  &__body {
+    padding: 20px;
+
+    &__description {
+      font-size: 13px;
+      margin: 0 0 15px 0;
+    }
+
+    &__input {
+      border-radius: $border-radius;
+      border: 1px solid #ccc;
+      display: block;
+      padding: 12px 15px;
+      width: 100%;
+
+      &:focus {
+        border-color: $primary;
+        box-shadow: none;
+        outline: none;
+      }
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $border-color;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+
+    .btn {
+      margin-left: 10px;
+    }
+  }
+}
+
+.flip-list-move {
+  transition: transform 0.5s;
+}
+.no-move {
+  transition: transform 0s;
+}
+.ghost {
+  opacity: 0.5;
+  background: #ccc;
+}
+
+@keyframes animatetop {
+  from {
+    opacity: 0;
+    top: -300px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+
+
+
+/* Flexbox */
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-justify-start {
+  justify-content: flex-start;
+}
+
+.flex-justify-end {
+  justify-content: flex-end;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.flex-justify-around {
+  justify-content: space-around;
+}
+
+.flex-items-start {
+  align-items: flex-start;
+}
+
+.flex-items-end {
+  align-items: flex-end;
+}
+
+.flex-items-center {
+  align-items: center;
+}
+
+.flex-items-baseline {
+  align-items: baseline;
+}
+
+.flex-items-stretch {
+  align-items: stretch;
+}
+
+.flex-content-start {
+  align-content: flex-start;
+}
+
+.flex-content-end {
+  align-content: flex-end;
+}
+
+.flex-content-center {
+  align-content: center;
+}
+
+.flex-content-between {
+  align-content: space-between;
+}
+
+.flex-content-around {
+  align-content: space-around;
+}
+
+.flex-content-stretch {
+  align-content: stretch;
+}
+
+.flex-1 {
+  flex: 1;
+}
